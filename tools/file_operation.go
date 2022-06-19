@@ -12,7 +12,7 @@ var ShopInfoCsvHeader = []string{"出资商家名称", "出资shop_id", "商家�
 // 生成csv文件
 func GenCsvFile() error {
 	// 不存在则创建;存在则清空;读写模式;
-	file, err := os.Create("../test_file/shop_info.csv") //文件生成在test_file下，也可以指定路径
+	file, err := os.Create("../files/shop_info.csv") //文件生成在test_file下，也可以指定路径
 	if err != nil {
 		fmt.Println("open file is failed, err: ", err)
 		return err
@@ -44,7 +44,7 @@ func GenCsvFile() error {
 
 // 解析csv文件
 func ParseCsvFile() error {
-	file, err := os.Open("../test_file/shop_info.csv")
+	file, err := os.Open("../files/shop_info.csv")
 	defer file.Close()
 	if err != nil {
 		fmt.Println("open file is failed, err: ", err)
