@@ -29,6 +29,6 @@ func String2Time(str string) time.Time {
 func Time2TimesStamp(tt time.Time) {
 	sec := tt.Unix() // 秒
 	fmt.Printf("秒：%v\n", sec)
-	millSec := tt.UnixMilli() // 纳秒
+	millSec := tt.UnixNano() // 纳秒
 	fmt.Printf("纳秒：%v\n", millSec)
 }
